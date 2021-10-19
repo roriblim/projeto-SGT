@@ -1,2 +1,10 @@
-# projeto-SGT
-sistema de gerenciamento de talentos - projeto da faculdade
+# projeto-SGT (sistema de gerenciamento de talentos)
+
+O artefato deste projeto consiste em um programa que, ao ser acionado, poderá executar e fornecer sugestões de lotação e realocação de servidores, conforme o caso, para um servidor recém nomeado no órgão, levando em consideração a área de interesse/domínio do servidor e a demanda de lotação apresentada pelo usuário do programa. Essas sugestões são propostas de maneira a procurar o melhor aproveitamento dos talentos e respeitar a solicitação feita pelo usuário, e seguem algumas premissas melhor descritas no próximo parágrafo. Para realizar tais ações, o programa faz a leitura de um arquivo com a extensão .csv, com formato pré-definido, contendo dados sobre os servidores (como nome, matrícula, área de interesse, setor, data de lotação), sendo que, inicialmente, a previsão de forma de alimentação de informações no programa será apenas por meio de arquivos .csv. Além disso, o programa conta, atualmente, com menu interativo para sua utilização, possibilidade de execução das propostas feitas pelo programa e de salvar arquivos com as alterações executadas.
+
+Para as sugestões de propostas, o programa segue algumas premissas definidas previamente pelo órgão, e que podem ser adaptadas a posteriori pelos desenvolvedores do programa de acordo com as necessidades apresentadas pelo cliente, caso necessário: 1 - priorização da menor rotatividade possível; 2 - são permitidas até duas realocações por proposta de nova lotação (considera-se realocação a alteração de setor de um servidor que já está lotado para outro de melhor adequação à sua área); 3 - caso a área do servidor desejado não tenha um setor de área correspondente no órgão, o programa utilizará para ele a opção “sem área definida”; 4 - setores que atingiram a lotação máxima não podem ser o alvo final da 
+lotação, a fim de que não tenham a lotação aumentada sem necessidade. 
+
+A busca realizada pelo programa, pela melhor proposta, tem como base um loop iterativo que transitará por todos os servidores lotados, e verificará se as áreas 
+dos servidores são compatíveis em uma hierarquia de três possibilidades:
+![image](https://user-images.githubusercontent.com/91087181/137899681-70d3d98f-3b20-4a0c-890e-bfbd20fc93a8.png)
